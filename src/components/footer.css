@@ -1,0 +1,20 @@
+footer{
+    position: relative;
+    width: 100%;
+    padding: 10px 10vw;
+    padding-bottom: 10px;
+    background: #5b6e84;
+    text-align: center;
+    color:whitesmoke;
+    font-weight: bold;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+
