@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './add_product.css';
 
-function add_product() {
+function Addproduct() {
   const [proname, setProname] = useState("");
   const [short_line, setShort_line] = useState("");
   const[detail_des,setDetail_des]=useState("");
@@ -10,6 +10,7 @@ function add_product() {
   const[img_2,setImg_2]=useState("");
   const[img_3,setImg_3]=useState("");
   const[img_4,setImg_4]=useState("");
+  const[size_sel,setSize_sel]=useState("");
   const[actual,setActual]=useState("");
   const[discount,setDiscount]=useState("");
   const[sell,setSell]=useState("");
@@ -34,6 +35,7 @@ function add_product() {
           img_2:img_2,
           img_3:img_3,
           img_4:img_4,
+          size_sel:size_sel,
           actual:actual,
           discount:discount,
           sell:sell,
@@ -43,13 +45,14 @@ function add_product() {
       });
       let resJson = await res.json();
       if (res.status === 200) {
-        setProame("");
+        setProname("");
         setShort_line("");
         setDetail_des("");
         setImg_1("");
         setImg_2("");
         setImg_3("");
         setImg_4("");
+        setSize_sel("");
         setActual("");
         setDiscount("");
         setSell("");
@@ -62,8 +65,37 @@ function add_product() {
     } catch (err) {
       console.log(err);
     }
-  };
 
+
+//     let uploadImages = document.querySelectorAll('.fileupload');
+//   let imagePaths = []; // will store all uploaded images paths;
+
+//   uploadImages.forEach((fileupload, index) => {
+//     fileupload.addEventListener('change', () => {
+//         const file = fileupload.files[0];
+//         let imageUrl;
+
+//         if(file.type.includes('image')){
+//             // means user uploaded an image
+
+//         } else{
+//             showAlert('upload image only');
+//         }
+//     })
+// })
+// const showAlert = (msg) => {
+//   let alertBox = document.querySelector('.alert-box');
+//   let alertMsg = document.querySelector('.alert-msg');
+//   alertMsg.innerHTML = msg;
+//   alertBox.classList.add('show');
+//   setTimeout(() => {
+//     alertBox.classList.remove('show');
+//   }, 3000);
+// }
+
+
+  };
+  
 
 return (
 	<div class="bdy">
@@ -83,9 +115,9 @@ return (
             <div class="upload-catalouge">
                 <input type="file" class="fileupload" id="first-file-upload-btn" value={img_1}  onChange={(e) => setImg_1(e.target.value)} hidden/>
                 <label for="first-file-upload-btn" class="upload-image"></label>
-                <input type="file" class="fileupload" id="second-file-upload-btn" value={img_2} onChange={(e) => setImg_2(e.target.value)} hidden/>
+                <input type="file" class="fileupload" id="second-file-upload-btn" value={img_2} onChange={(e) => setImg_2(e.target.value)}hidden/>
                 <label for="second-file-upload-btn" class="upload-image"></label>
-                <input type="file" class="fileupload" id="third-file-upload-btn" value={img_3} onChange={(e) => setImg_3(e.target.value)} hidden/>
+                <input type="file" class="fileupload" id="third-file-upload-btn" value={img_3} onChange={(e) => setImg_3(e.target.value)}hidden/>
                 <label for="third-file-upload-btn" class="upload-image"></label>
                 <input type="file" class="fileupload" id="fourth-file-upload-btn" value={img_4} onChange={(e) => setImg_4(e.target.value)} hidden/>
                 <label for="fourth-file-upload-btn" class="upload-image"></label>
@@ -128,4 +160,4 @@ return (
 );
 };
 
-export default add_product;
+export default Addproduct;

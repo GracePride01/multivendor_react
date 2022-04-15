@@ -10,7 +10,7 @@ import Blogs from './pages/blog';
 import SignUp from './pages/signup';
 import Login from './pages/login';
 import Products from './pages/product';
-import add_product from './pages/add_product';
+import Addproduct from './pages/add_product';
 
 
 function App() {
@@ -27,7 +27,7 @@ return (
 		<Route path='/signup' component={SignUp} />
     <Route path='/login' component={Login} />
 	<Route path='/products' component ={Products}></Route>
-	<Route path='/add_product'component={add_product}></Route>
+	<Route path='/add_product'component={Addproduct}></Route>
 	</Switch>
 	<footer>
 	
