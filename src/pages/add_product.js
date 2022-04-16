@@ -22,7 +22,7 @@ function Addproduct() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("http://localhost:8080/api/auth/signin/", {
+      let res = await fetch("http://localhost:8080/api/auth/add_product/", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
