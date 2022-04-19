@@ -10,7 +10,7 @@ function Addproduct() {
   const[img_2,setImg_2]=useState("");
   const[img_3,setImg_3]=useState("");
   const[img_4,setImg_4]=useState("");
-  const[size_sel,setSize_sel]=useState("");
+  const[size_sel,setSize]=useState("");
   const[actual,setActual]=useState("");
   const[discount,setDiscount]=useState("");
   const[sell,setSell]=useState("");
@@ -52,7 +52,7 @@ function Addproduct() {
         setImg_2("");
         setImg_3("");
         setImg_4("");
-        setSize_sel("");
+        setSize("");
         setActual("");
         setDiscount("");
         setSell("");
@@ -99,7 +99,7 @@ function Addproduct() {
 
 return (
 	<div class="bdy">
-	
+	<h1 class="add_head" >Add Product</h1>
 
 <form onsubmit={handleSubmit}>
     <input type="text" id="product-name" placeholder="product name" value={proname} onChange={(e) => setProname(e.target.value)}/>
@@ -126,13 +126,13 @@ return (
         <div class="select-sizes">
             <p class="text">size available</p>
             <div class="sizes">
-                <input type="checkbox" class="size-checkbox" id="xs" value="xs" onChange={(e) => setSize_sel(e.target.value)}/>
-                <input type="checkbox" class="size-checkbox" id="s" value="s" onChange={(e) => setSize_sel(e.target.value)}/>
-                <input type="checkbox" class="size-checkbox" id="m" value="m" onChange={(e) => setSize_sel(e.target.value)}/>
-                <input type="checkbox" class="size-checkbox" id="l" value="l" onChange={(e) => setSize_sel(e.target.value)}/>
-                <input type="checkbox" class="size-checkbox" id="xl" value="xl" onChange={(e) => setSize_sel(e.target.value)}/>
-                <input type="checkbox" class="size-checkbox" id="xxl" value="xxl" onChange={(e) => setSize_sel(e.target.value)}/>
-                <input type="checkbox" class="size-checkbox" id="xxxl" value="xxxl" onChange={(e) => setSize_sel(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="xs" value="xs" onChange={(e) => setSize(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="s" value="s" onChange={(e) => setSize(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="m" value="m" onChange={(e) => setSize(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="l" value="l" onChange={(e) => setSize(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="xl" value="xl" onChange={(e) => setSize(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="xxl" value="xxl" onChange={(e) => setSize(e.target.value)}/>
+                <input type="checkbox" class="size-checkbox" id="xxxl" value="xxxl" onChange={(e) => setSize(e.target.value)}/>
             </div>
         </div>
     </div>
