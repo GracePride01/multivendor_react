@@ -8,6 +8,7 @@ function SignUp() {
 
   const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
+  
   let handleSubmit = async (e) => {
     e.preventDefault();
  

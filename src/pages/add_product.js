@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import './add_product.css';
 
 function Addproduct() {
-  const [proname, setProname] = useState("");
-  const [short_line, setShort_line] = useState("");
-  const[detail_des,setDetail_des]=useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const[published,setPublished]=useState("");
   const[img_1,setImg_1]=useState("");
   const[img_2,setImg_2]=useState("");
   const[img_3,setImg_3]=useState("");
@@ -22,43 +22,43 @@ function Addproduct() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("http://localhost:8080/api/auth/add_product/", {
+      let res = await fetch("http://localhost:8080/api/inserttutorials/", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          proname: proname,
-          short_line: short_line,
-          detail_des:detail_des,
-          img_1:img_1,
-          img_2:img_2,
-          img_3:img_3,
-          img_4:img_4,
-          size_sel:size_sel,
-          actual:actual,
-          discount:discount,
-          sell:sell,
-          stock:stock,
-          categ:categ
+          title: title,
+          description: description,
+          published:published,
+          // img_1:img_1,
+          // img_2:img_2,
+          // img_3:img_3,
+          // img_4:img_4,
+          // size_sel:size_sel,
+          // actual:actual,
+          // discount:discount,
+          // sell:sell,
+          // stock:stock,
+          // categ:categ
         }),
       });
       let resJson = await res.json();
       if (res.status === 200) {
-        setProname("");
-        setShort_line("");
-        setDetail_des("");
-        setImg_1("");
-        setImg_2("");
-        setImg_3("");
-        setImg_4("");
-        setSize("");
-        setActual("");
-        setDiscount("");
-        setSell("");
-        setStock("");
-        setCateg("");
-        setMessage(resJson.proname);
+        setTitle("");
+        setDescription("");
+        setPublished("");
+        // setImg_1("");
+        // setImg_2("");
+        // setImg_3("");
+        // setImg_4("");
+        // setSize("");
+        // setActual("");
+        // setDiscount("");
+        // setSell("");
+        // setStock("");
+        // setCateg("");
+        setMessage(resJson.title);
       } else {
         setMessage("Some error occured");
       }
@@ -102,9 +102,9 @@ return (
 	<h1 class="add_head" >Add Product</h1>
 
 <form onsubmit={handleSubmit}>
-    <input type="text" id="product-name" placeholder="product name" value={proname} onChange={(e) => setProname(e.target.value)}/>
-    <input type="text" id="short-des" placeholder="short line about the product"value={short_line} onChange={(e) => setShort_line(e.target.value)}/>
-    <textarea id="des" placeholder="detail description" value={detail_des} onChange={(e) => setDetail_des(e.target.value)}></textarea>
+    <input type="text" id="product-name" placeholder="product name" value={title} onChange={(e) => setTitle(e.target.value)}/>
+    <input type="text" id="short-des" placeholder="short line about the product"value={description} onChange={(e) => setDescription(e.target.value)}/>
+    <textarea id="des" placeholder="detail description" value={published} onChange={(e) => setPublished(e.target.value)}></textarea>
 
     {/* <!-- product image --> */}
     <div class="product-info">
@@ -151,8 +151,8 @@ return (
     <label for="tac">clothing take 30% from your total sell</label>
 
     <div class="buttons">
-        <button class="btn" id="add-btn">add product</button>
-        <button class="btn" id="save-btn">save draft</button>
+        <input type="submit" class="btn" id="add-btn" value="add product"/>
+        <input type="submit" class="btn" id="save-btn" value="save draft"/>
     </div>
     <div className="message">{message ? <p>{message}</p> : null}</div>
 </form>

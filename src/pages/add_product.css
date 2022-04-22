@@ -178,6 +178,7 @@ input::-webkit-inner-spin-button{
     outline: none;
     margin-right: 10px;
     cursor: pointer;
+    width:50%;
 }
 
 #save-btn{
