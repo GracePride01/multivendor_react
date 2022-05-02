@@ -31,7 +31,34 @@ return (
 					{
 						show?<div class="login-logout-popup">
 						<p class="account-info">Log in as, name</p>
-						<button class="btn" id="user-btn" >Log Out</button>
+
+
+		      		
+		           	
+				      	
+				     	<a href="/login" ><button   type="submit"  class="btn" id="user-btn">Sign In</button></a>
+				     	
+				     	
+                    <ul class="popup">
+				      	<li><a class="popup_a bold"  href="#">My Account</a></li>
+				      	<hr class="divider"></hr>
+				      	
+				  		
+				      	
+				     	<li><a class="popup_a bold" href="#">My orders</a></li>
+						 <hr class="divider"></hr>
+
+				     	<li><a  class="popup_a bold" href="/">Wish list</a></li>
+						<hr class="divider"></hr>
+
+				     	<li><a  class="popup_a bold" href="/">Log Out</a></li><hr class="divider"></hr>
+
+		          	</ul>
+				
+
+
+
+						
 					</div>:null
 					}
 				</a>

@@ -41,54 +41,57 @@ function Login() {
 
 
   return (
+    <div style={{
+      marginTop:'50px'
+    }}>
  
-    <div class="container" >
-       
-    <h1 class="su_li" >Log In</h1>
-    
-    <form onSubmit={handleSubmit}>
-    <div className="form-group row">
-      <label className="col-sm-2 ">User Name: </label>
-      <FontAwesomeIcon icon={faUser}/>
-          <div className="col-sm-4">
-              <input
-                class="text_pass"
-                type="text"
-                value={name}
-                placeholder=" User Name"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-        </div>
-      <div className="form-group row">
-        <label className="col-sm-3 ">Password: </label>
-        <FontAwesomeIcon icon={faLock}/>
-            <div className="col-sm-4">
-              <input
-                class="text_pass"
-                type="password"
-                value={pass}
-                placeholder="Password"
-                onChange={(e) => setPass(e.target.value)}
-              />
-            </div>
-            <br></br>
-            <div className="form-group row">
-                
-            <input type="submit"  class="btn_sign_up" value="Log In" />
-           </div>
-           
+      <div class="container" >
+        
+      <h1 class="su_li" >Log In</h1>
+      
+        <form onSubmit={handleSubmit}>
+          <div className="form-group row">
+            <label className="col-sm-2 ">User Name: </label>
+            <FontAwesomeIcon icon={faUser}/>
+                <div className="col-sm-4">
+                    <input
+                      class="text_pass"
+                      type="text"
+                      value={name}
+                      placeholder=" User Name"
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                </div>
+          </div>
+          <div className="form-group row">
+            <label className="col-sm-3 ">Password: </label>
+            <FontAwesomeIcon icon={faLock}/>
+                <div className="col-sm-4">
+                  <input
+                    class="text_pass"
+                    type="password"
+                    value={pass}
+                    placeholder="Password"
+                    onChange={(e) => setPass(e.target.value)}
+                  />
+                </div>
+              <br></br>
+              <div className="form-group row">
+                <input type="submit"  class="btn_sign_up" value="Log In" />
+              </div>
+            
+          </div>
+          <br></br>
+          <a href="/signup" class="link">New Customer? Start here</a>
+
+        
+          <div className="message">{message ? <p>{message}</p> : null}</div>
+        </form>
       </div>
-
-     
-      <div className="message">{message ? <p>{message}</p> : null}</div>
-    </form>
     <br></br>
     <br></br>
-   
-
-
-  </div>
+ 
+    </div>
   
   );
 }

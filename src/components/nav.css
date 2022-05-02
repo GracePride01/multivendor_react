@@ -18,7 +18,7 @@
     background: #cec9c9;
 }
 .nav{
-    padding: 10px 10vw;
+    padding: 5px 5vw; 
     display: flex;
     justify-content: space-between;
 }
@@ -152,4 +152,30 @@
 .hide{
     opacity: 0;
     pointer-events: none;
+}
+
+.popup{
+   
+    list-style-type: none;
+    
+    
+}
+.popup_a
+{
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    
+}
+
+
+.popup_a.bold:hover {
+    font-size:21px;
+    color:#bf3e11;
+}
+.divider{
+   color: #bbb;
+    opacity: 0.3;
+   
 }
