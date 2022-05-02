@@ -28,6 +28,7 @@ return (
     <Route path='/login' component={Login} />
 	<Route path='/products' component ={Products}></Route>
 	<Route path='/add_product'component={Addproduct}></Route>
+
 	</Switch>
 	<footer>
 	

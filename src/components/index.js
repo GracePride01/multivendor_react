@@ -47,7 +47,7 @@ return (
 				      	
 				     	<li><a class="popup_a bold" href="#">My orders</a></li>
 						 <hr class="divider"></hr>
-
+ 
 				     	<li><a  class="popup_a bold" href="/">Wish list</a></li>
 						<hr class="divider"></hr>
 
