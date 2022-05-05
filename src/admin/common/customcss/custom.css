@@ -1,0 +1,28 @@
+/* DEMO Styles (ignore) */
+body {padding-top: 3.5rem; font-size:18px;}
+footer{border-top:2px solid #eee; margin-top: 1em; padding: 1em 0; text-align: center; color: #999; font-size: 14px;}
+footer p{margin-bottom: 0;}
+.demo-wrapper{margin-bottom: 3em;}
+@media only screen and (min-width : 768px) {
+	.demo-wrapper{margin-bottom: 4em;}
+}
+/* END Demo Styles */
+
+
+/* NEW 2nd-Level Dropdown CSS START */
+.dropdown-submenu{position: relative;}
+.dropdown-submenu .caret{-webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+.dropdown-submenu > .dropdown-menu {top:0; left:100%; margin-top:-6px; margin-left:-1px;}
+.dropdown-submenu.open > a:after{border-left-color:#fff;}
+.dropdown-submenu.open > .dropdown-menu, .dropdown-submenu.open > .dropdown-menu {display: block;}
+.dropdown-submenu .dropdown-menu{margin-bottom: 8px;}
+.navbar-default .navbar-nav .open .dropdown-menu .dropdown-submenu ul{background-color: #f6f6f6;}
+.navbar-inverse .navbar-nav .open .dropdown-menu .dropdown-submenu ul{background-color:#333;}
+.navbar .navbar-nav .open .dropdown-submenu .dropdown-menu  > li > a{padding-left: 30px;}
+@media screen and (min-width:992px){
+	.dropdown-submenu .dropdown-menu{margin-bottom: 2px;}
+	.navbar .navbar-nav .open .dropdown-submenu .dropdown-menu  > li > a{padding-left: 25px;}
+	.navbar-default .navbar-nav .open .dropdown-menu .dropdown-submenu ul{background-color:#fff;}
+	.navbar-inverse .navbar-nav .open .dropdown-menu .dropdown-submenu ul{background-color:#fff;}
+}
+/* NEW 2nd-Level Dropdown CSS END */

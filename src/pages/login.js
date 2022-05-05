@@ -2,12 +2,12 @@ import './login.css';
 import { useState } from "react";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser, faLock,} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faLock,} from "@fortawesome/free-solid-svg-icons";
 
 function Login() {
 
-
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
  
   const [message, setMessage] = useState("");
@@ -15,28 +15,38 @@ function Login() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("http://localhost:8080/api/auth/signin/", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          username: name,
-          password: pass
-        }),
-      });
+      let res = fetch("http://localhost/mv_php/sign.php?&password="+pass+"&email="+email);
       let resJson = await res.json();
-      if (res.status === 200) {
-        setName("");
-        setPass("");
-        setMessage(resJson.username);
-      } else {
-        setMessage("Some error occured");
-      }
-    } catch (err) {
+      alert(res);
+      console.log(res);
+      // if (res.status === 200) {
+      //   setName("");
+      //   setEmail("");
+      //   setPass("");
+      //   setMessage(resJson.email);
+      //   showAlert("hi...");
+      // } else {
+      //   setMessage("Some error occured");
+      // }
+    } 
+    catch (err) {
       console.log(err);
+      showAlert(err);
     }
+    showAlert("Logged In Successfully...");
   };
+
+  const showAlert = (msg) => {
+		let alertBox = document.querySelector('.alert-box');
+		let alertMsg = document.querySelector('.alert-msg');
+		alertMsg.innerHTML = msg;
+		alertBox.classList.add('show');
+		setTimeout(() => {
+			alertBox.classList.remove('show');
+		}, 3000);
+	}
+	
+	
 
 
 
@@ -51,15 +61,15 @@ function Login() {
       
         <form onSubmit={handleSubmit}>
           <div className="form-group row">
-            <label className="col-sm-2 ">User Name: </label>
-            <FontAwesomeIcon icon={faUser}/>
+            <label className="col-sm-2 ">Email Id: </label>
+            <FontAwesomeIcon icon={faEnvelope}/>
                 <div className="col-sm-4">
                     <input
                       class="text_pass"
                       type="text"
-                      value={name}
-                      placeholder=" User Name"
-                      onChange={(e) => setName(e.target.value)}
+                      value={email}
+                      placeholder=" Email Id"
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
           </div>
@@ -85,7 +95,10 @@ function Login() {
           <a href="/signup" class="link">New Customer? Start here</a>
 
         
-          <div className="message">{message ? <p>{message}</p> : null}</div>
+          <div class="alert-box">
+			<img src={require("./images/error-icon.ico")} class="alert-img" alt=""/>
+			<p class="alert-msg">Error message</p>
+		</div>
         </form>
       </div>
     <br></br>

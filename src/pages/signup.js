@@ -8,31 +8,35 @@ function SignUp() {
 
   const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
-  
+  let showAlert = (msg) => {
+	let alertBox = document.querySelector('.alert-box');
+	let alertMsg = document.querySelector('.alert-msg');
+	alertMsg.innerHTML = msg;
+	alertBox.classList.add('show');
+	setTimeout(() => {
+		alertBox.classList.remove('show');
+	}, 3000);
+}
   let handleSubmit = async (e) => {
     e.preventDefault();
  
     try {
-      let res = fetch("http://localhost:8080/api/auth/signup/", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          username: name,
-		  email:email,
-          password: pass
-        }),
+      let res = fetch("http://localhost/mv_php/register.php?username="+name+"&password="+pass+"&email="+email, {
+        method: "GET",
       });
-      let resJson = await res.json();
-      if (res.status === 200) {
-        setName("");
-        setPass("");
-		setEmail("");
-        setMessage(resJson.username);
-      } else {
-        setMessage("Some error occured");
-      }
+    //   let resJson = await res.json();
+    //   if (res.status === 200) {
+		
+    //     setName("");
+    //     setPass("");
+	// 	setEmail("");
+    //     setMessage(resJson.username);
+	// 	showAlert("Account Created Successfully...");
+
+		
+    //   } else {
+    //     setMessage("Some error occured");
+    //   }
     } catch (err) {
       console.log(err);
     }
@@ -76,18 +80,10 @@ function SignUp() {
 				// submit form
 				
 				handleSubmit();
-				showAlert("Account Created Successfully...");
+				
 			}
 	})
-	const showAlert = (msg) => {
-		let alertBox = document.querySelector('.alert-box');
-		let alertMsg = document.querySelector('.alert-msg');
-		alertMsg.innerHTML = msg;
-		alertBox.classList.add('show');
-		setTimeout(() => {
-			alertBox.classList.remove('show');
-		}, 3000);
-	}
+	
 	
 	});
 

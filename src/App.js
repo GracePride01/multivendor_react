@@ -11,7 +11,7 @@ import SignUp from './pages/signup';
 import Login from './pages/login';
 import Products from './pages/product';
 import Addproduct from './pages/add_product';
-
+import Sidebar from './admin/sidebar';
 
 function App() {
 return (
@@ -25,10 +25,10 @@ return (
 		{/* <Route path='/team' component={Teams} /> */}
 		<Route path='/blog' component={Blogs} />
 		<Route path='/signup' component={SignUp} />
-    <Route path='/login' component={Login} />
-	<Route path='/products' component ={Products}></Route>
-	<Route path='/add_product'component={Addproduct}></Route>
-
+		<Route path='/login' component={Login} />
+		<Route path='/products' component ={Products}></Route>
+		<Route path='/add_product'component={Addproduct}></Route>
+		<Route path='/sidebar' component={Sidebar}> </Route>
 	</Switch>
 	<footer>
 	
