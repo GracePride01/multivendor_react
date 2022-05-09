@@ -61,9 +61,13 @@ return (
                 <label for="xl-size" class="size-radio-btn">xl</label>
                 <input type="radio" name="size" value="xxl" hidden id="xxl-size"/>
                 <label for="xxl-size" class="size-radio-btn">xxl</label>
+                
+                <div class="flex">
 
                 <button class="btn cart-btn">add to cart</button>
                 <button class="btn">add to wishlist</button>
+
+                </div>
             </div>
         </section>
         <section class="detail-des">

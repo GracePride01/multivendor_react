@@ -1,5 +1,6 @@
 import {useEffect ,React} from 'react';
 import { useState } from "react";
+import axios from "axios";
 import {faUser, faLock, faEnvelope,} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 function SignUp() {
@@ -20,26 +21,43 @@ function SignUp() {
   let handleSubmit = async (e) => {
     e.preventDefault();
  
-    try {
-      let res = fetch("http://localhost/mv_php/register.php?username="+name+"&password="+pass+"&email="+email, {
-        method: "GET",
-      });
-    //   let resJson = await res.json();
-    //   if (res.status === 200) {
-		
-    //     setName("");
-    //     setPass("");
-	// 	setEmail("");
-    //     setMessage(resJson.username);
-	// 	showAlert("Account Created Successfully...");
+        axios({
+            method: 'post',
+            url: "http://localhost/mv_php/register.php?username="+name+"&password="+pass+"&email="+email
+        })
+        .then(function (response) {
+              if (response.status === 200) {
+				  if(response.data==="s"){
+					  
+					setName("");
+					setPass("");
+					setEmail("");
+					setMessage(response.data);
+					showAlert("Account Created Successfully...");
 
-		
-    //   } else {
-    //     setMessage("Some error occured");
-    //   }
-    } catch (err) {
-      console.log(err);
-    }
+				  }
+				  else{
+					  
+					setName("");
+					setPass("");
+					setEmail("");
+					setMessage(response.data);
+					showAlert("Error...");
+
+				  }
+					
+				} 
+				else {
+					setMessage("Some error occured");
+				}
+			console.log(response)
+
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response)
+        });
+
 	}
 
 	  useEffect(() => { 

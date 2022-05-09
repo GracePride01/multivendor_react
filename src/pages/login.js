@@ -1,12 +1,16 @@
 import './login.css';
 import { useState } from "react";
-
+import {useHistory} from "react-router-dom";
+import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faLock,} from "@fortawesome/free-solid-svg-icons";
+import { ReactSession } from 'react-client-session';
+
 
 function Login() {
+  let navigate = useHistory();
 
-  const [name, setName] = useState("");
+ 
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
  
@@ -14,27 +18,31 @@ function Login() {
 
   let handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      let res = fetch("http://localhost/mv_php/sign.php?&password="+pass+"&email="+email);
-      let resJson = await res.json();
-      alert(res);
-      console.log(res);
-      // if (res.status === 200) {
-      //   setName("");
-      //   setEmail("");
-      //   setPass("");
-      //   setMessage(resJson.email);
-      //   showAlert("hi...");
-      // } else {
-      //   setMessage("Some error occured");
-      // }
-    } 
-    catch (err) {
-      console.log(err);
-      showAlert(err);
-    }
-    showAlert("Logged In Successfully...");
-  };
+    axios({
+      method: 'post',
+      url: "http://localhost/mv_php/sign.php?&password="+pass+"&email="+email
+  })
+  .then(function (response) {
+        if (response.status === 200) {
+            console.log(response.data)
+            showAlert("Logged In Successfully...");
+            sessionStorage.setItem("username", response.data.username);
+	        	navigate.push("/");
+
+            console.log(sessionStorage.getItem('username'));
+
+        } 
+        else {
+          setMessage("Some error occured");
+        }
+    
+
+  })
+  .catch(function (response) {
+      //handle error
+      console.log(response)
+  });
+}
 
   const showAlert = (msg) => {
 		let alertBox = document.querySelector('.alert-box');
@@ -93,7 +101,7 @@ function Login() {
           </div>
           <br></br>
           <a href="/signup" class="link">New Customer? Start here</a>
-
+          <div className="message">{message ? <p>{message}</p> : null}</div>
         
           <div class="alert-box">
 			<img src={require("./images/error-icon.ico")} class="alert-img" alt=""/>

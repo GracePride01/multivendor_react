@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components';
+import { ReactSession } from 'react-client-session';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
@@ -11,32 +12,29 @@ import SignUp from './pages/signup';
 import Login from './pages/login';
 import Products from './pages/product';
 import Addproduct from './pages/add_product';
-import Sidebar from './admin/sidebar';
+
 
 function App() {
+	ReactSession.setStoreType("localStorage");
 return (
 	<Router>
-	<Navbar />
-	<Switch>
-		<Route path='/' exact component={Home} />
-		<Route path='/about' component={About} />
-		<Route path='/events' component={Events} />
-		<Route path='/annual' component={AnnualReport} />
-		{/* <Route path='/team' component={Teams} /> */}
-		<Route path='/blog' component={Blogs} />
-		<Route path='/signup' component={SignUp} />
-		<Route path='/login' component={Login} />
-		<Route path='/products' component ={Products}></Route>
-		<Route path='/add_product'component={Addproduct}></Route>
-		<Route path='/sidebar' component={Sidebar}> </Route>
-	</Switch>
-	<footer>
-	
-       
-	2022 Copy Rights @ CITS
-  
-
-</footer>
+		<Navbar />
+		<Switch>
+			<Route path='/' exact component={Home} />
+			<Route path='/about' component={About} />
+			<Route path='/events' component={Events} />
+			<Route path='/annual' component={AnnualReport} />
+			{/* <Route path='/team' component={Teams} /> */}
+			<Route path='/blog' component={Blogs} />
+			<Route path='/signup' component={SignUp} />
+			<Route path='/login' component={Login} />
+			<Route path='/products' component ={Products}></Route>
+			<Route path='/add_product'component={Addproduct}></Route>
+			
+		</Switch>
+		<footer>
+			2022 Copy Rights @ CITS
+		</footer>
 	</Router>
 );
 }

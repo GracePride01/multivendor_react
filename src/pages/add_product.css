@@ -166,6 +166,7 @@ input::-webkit-inner-spin-button{
 
 .buttons{
     margin: 20px 0 50px;
+    display:flex;
 }
 
 .btn{
