@@ -19,16 +19,7 @@ function Addproduct() {
   const [message, setMessage] = useState("");
   let sizes = [];
 
-  let showAlert = (msg) => {
-    let alertBox = document.querySelector('.alert-box');
-    let alertMsg = document.querySelector('.alert-msg');
-    alertMsg.innerHTML = msg;
-    alertBox.classList.add('show');
-    setTimeout(() => {
-      alertBox.classList.remove('show');
-    }, 3000);
-  }
-
+ 
   // store size function
 const storeSizes = () => {
   sizes = [];
@@ -38,6 +29,15 @@ const storeSizes = () => {
           sizes.push(item.value);
       }
   })
+}
+let showAlert = (msg) => {
+  let alertBox = document.querySelector('.alert-box');
+  let alertMsg = document.querySelector('.alert-msg');
+  alertMsg.innerHTML = msg;
+  alertBox.classList.add('show');
+  setTimeout(() => {
+    alertBox.classList.remove('show');
+  }, 3000);
 }
 
   let handleSubmit = async (e) => {
@@ -121,7 +121,7 @@ return (
 	<div class="bdy">
 	<h1 class="add_head" >Add Product</h1>
 
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}encType="multipart">
     <input type="text" id="product-name" placeholder="Product Name" value={proname} onChange={(e) => setProname(e.target.value)}/>
     <input type="text" id="short-des" placeholder="Short line about the product"value={short_line} onChange={(e) => setShort_line(e.target.value)}/>
     <textarea id="des" placeholder="Detail Description" value={detail_des} onChange={(e) => setDetail_des(e.target.value)}></textarea>
@@ -168,7 +168,7 @@ return (
     <textarea id="tags" placeholder="Enter categories here, for example - Men, Jeans, Blue Jeans, Rough jeans (you sholud add men or women at start)" value={categ} onChange={(e) => setCateg(e.target.value)}></textarea>
 
     <input type="checkbox" class="checkbox" id="tac"/>
-    <label for="tac">clothing take 30% from your total sell</label>
+    <label for="tac">Clothing take 30% from your total sell</label>
 
     <div class="buttons" >
         <input type="submit" class="btn" id="add-btn" value="add product"/>
