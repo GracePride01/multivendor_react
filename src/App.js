@@ -13,6 +13,7 @@ import Login from './pages/login';
 import Products from './pages/product';
 import Addproduct from './pages/add_product';
 import ViewProduct from './pages/view_product';
+import Seller from './pages/seller';
 
 
 function App() {
@@ -32,6 +33,7 @@ return (
 			<Route path='/products' component ={Products}></Route>
 			<Route path='/add_product'component={Addproduct}></Route>
 			<Route path='/view_product' component={ViewProduct}></Route>
+			<Route path='/seller' component={Seller}></Route>
 			
 		</Switch>
 		<footer>

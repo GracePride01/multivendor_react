@@ -1,0 +1,75 @@
+.seller_bdy{
+    /* width: 100px; */
+    display:block;
+    min-height: auto;
+    padding: 20px 75px 20px 75px;
+    position: relative;
+    font-family: roboto,sans-serif;
+
+}
+.hide{
+    display: none;
+}
+/*become seller element*/
+.become-seller{
+    border-radius: 10px;
+    background: #fff;
+    padding: 30px;
+}
+
+.heading{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18px;
+}
+.des{
+    margin: 20px 0;
+    text-transform: capitalize;
+    line-height: 25px;
+
+}
+.btn-seller{
+    border: none;
+    outline: none;
+    background: #383838;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 14px;
+    cursor:pointer;
+}
+/*apply forms*/
+.apply-form input, textarea{
+    font-weight: 500;
+
+}
+.apply-form input:not(input[type="checkbox"]){
+    width:100%;
+}
+.apply-form textarea{
+    width: 100%;
+    height:90px;
+    resize:none;
+    padding:10px 20px;
+}
+.submit-btn{
+    margin:10px 0;
+   
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px ;
+    margin-left: 3%;
+    border: none;
+    border-radius: 10% 30% 50% 70%;
+    font-weight:bold;
+    cursor: pointer;
+    float: center;
+    width : 50%;
+    height :50%
+}
+.submit-btn:hover{
+    background-color: #45a049;
+}
