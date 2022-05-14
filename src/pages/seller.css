@@ -73,3 +73,24 @@
 .submit-btn:hover{
     background-color: #45a049;
 }
+
+/* Product listing */
+.add-product{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.add-product-title{
+    text-transform: capitalize;
+    color :#383838;
+    
+}
+.no-product-image{
+    display:block;
+    margin:auto;
+}

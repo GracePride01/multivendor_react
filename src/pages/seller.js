@@ -3,16 +3,39 @@ import './seller.css';
 import './add_product.css';
 function Seller()  {
 const becomeSellerElement=document.querySelector('.become-seller');
+const productListingElement=document.querySelector('.product-listing');
 const applyForm=document.querySelector('.apply-form');
 const showApplyFormBtn=document.querySelector('#apply-btn');
 
 
+let showAlert = (msg) => {
+	let alertBox = document.querySelector('.alert-box');
+	let alertMsg = document.querySelector('.alert-msg');
+	alertMsg.innerHTML = msg;
+	alertBox.classList.add('show');
+	setTimeout(() => {
+		alertBox.classList.remove('show');
+	}, 3000);
+}
+
+
 // form submission
-const applyFormButton = document.querySelector('#apply-form-btn"); const businessName = document.querySelector('#business-name'); const address = document.querySelector('#business-add'); const about = document.querySelector('#about'); const number = document.querySelector('#number'); const tac = document.querySelector('#terms-and-condi const legitInfo = document.querySelector('#legitInfo');
-applyFormButton.addEventListener("click', 0 => {
-if(!businessName.value. length || !address.value. length || !about.value.length || !number.value.length) {
-    
-}})
+const applyFormButton = document.querySelector('#apply-form-btn'); 
+const businessName = document.querySelector('#business-name'); 
+const address = document.querySelector('#business-add'); 
+const about = document.querySelector('#about'); 
+const number = document.querySelector('#number'); 
+const tac = document.querySelector('#terms-and-condi');
+const legitInfo = document.querySelector('#legitInfo');
+
+// applyFormButton.addEventListener('click', ()=> {
+// if(!businessName.value. length || !address.value. length || !about.value.length || !number.value.length) {
+//     showAlert('fill all the inputs');
+// }else if(!TrackEvent.checked|| !legitInfo.checked){
+//     showAlert('you must agree to our terms and condition')
+// }
+// })
+
 
 
 
@@ -38,6 +61,14 @@ return (
             <label for="legitInfo"> all information is legit</label>
             <br/>
             <button type="submit" class="submit-btn" id="appply-form-btn">apply</button>
+         </div>
+         {/* Product list */}
+         <div class="product-listing">
+            <div class="add-product">
+                <p class="add-product-title">Add Product</p>
+                <button class="btn">Add Product</button>
+            </div>
+            <img src={require("./images/no-products.png")}class="no-product-image" alt=""></img>
          </div>
 	</div>
    
