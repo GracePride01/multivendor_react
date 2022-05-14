@@ -122,6 +122,7 @@ function SignUp() {
 				    class="text_pass"
 					type="text"
 					id='name'
+					required
 					value={name}
 					placeholder=" User Name"
 					onChange={(e) => setName(e.target.value)}
@@ -137,6 +138,7 @@ function SignUp() {
 				    class="text_pass"
 					type="text"
 					id='email'
+					required
 					value={email}
 					placeholder="Email"
 					onChange={(e) => setEmail(e.target.value)}
