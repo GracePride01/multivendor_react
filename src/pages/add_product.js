@@ -4,6 +4,7 @@ import './add_product.css';
 import axios from "axios";
 function Addproduct() {
   const [proname, setProname] = useState("");
+  const [previewtxt, setpreviewtxt] = useState("");
   const [short_line, setShort_line] = useState("");
   const[detail_des,setDetail_des]=useState("");
   const[img_1,setImg_1]=useState("");
@@ -168,36 +169,18 @@ addProductBtn.addEventListener('click',()=>{
     handleSubmit();
   }
 
-//image preview//
-  if (!selectedFile) {
-    setPreview(undefined)
-    return
-}
+})
 
-const objectUrl = URL.createObjectURL(selectedFile)
-setPreview(objectUrl)
 
-// free memory when ever this component is unmounted
-return () => URL.revokeObjectURL(objectUrl)
 
-},[selectedFile])
+
+
+},[selectedFile]);
 const onSelectFile = e => {
-  if (!e.target.files || e.target.files.length === 0) {
-      setSelectedFile(undefined)
-      return
+  if (e.target.files && e.target.files.length > 0) {
+      setSelectedFile(e.target.files[0]);
   }
-
-  // I've kept this example simple by using the first image instead of multiple
-  setSelectedFile(e.target.files[0])
-}
-
-
-
-
-
-});
-  
-
+};
 return (
 	<div class="bdy">
 	<h1 class="add_head" >Add Product</h1>
@@ -212,12 +195,13 @@ return (
 
     {/* <!-- product image --> */}
     <div class="product-info">
-        <div class="product-image"><p class="text">Product Image</p></div>
+        <div class="product-image" ><p class="text">{previewtxt}</p><p class="text">Product <br></br>{selectedFile &&  <img width="200px" height="100px" src={URL.createObjectURL(selectedFile)} /> }</p></div>
         <div class="upload-image-sec">
             {/* <!-- upload inputs --> */}
             <p class="text"><img  src= {require("./images/2.jpg")} alt=""/>Upload Image</p>
             <div class="upload-catalouge">
-                <input type="file" required class="fileupload" id="first-file-upload-btn" value={img_1}  onChange={(e) => {onSelectFile(); setImg_1(e.target.value)}} hidden/>
+                <input type="file" required class="fileupload" id="first-file-upload-btn" value={img_1}  onChange={onSelectFile} hidden/>
+                
                 <label for="first-file-upload-btn" class="upload-image"></label>
                 <input type="file" class="fileupload" id="second-file-upload-btn" value={img_2} onChange={(e) => setImg_2(e.target.value)}hidden/>
                 <label for="second-file-upload-btn" class="upload-image"></label>
