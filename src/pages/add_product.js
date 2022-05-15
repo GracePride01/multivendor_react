@@ -198,7 +198,7 @@ return (
         <div class="product-image" ><p class="text">{previewtxt}</p><p class="text">Product <br></br>{selectedFile &&  <img width="200px" height="100px" src={URL.createObjectURL(selectedFile)} /> }</p></div>
         <div class="upload-image-sec">
             {/* <!-- upload inputs --> */}
-            <p class="text"><img  src= {require("./images/2.jpg")} alt=""/>Upload Image</p>
+            <p class="text"><img  src= {require("./images/camera.png")} alt=""/>Upload Image</p>
             <div class="upload-catalouge">
                 <input type="file" required class="fileupload" id="first-file-upload-btn" value={img_1}  onChange={onSelectFile} hidden/>
                 

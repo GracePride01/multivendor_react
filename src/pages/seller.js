@@ -1,23 +1,17 @@
-import React from 'react';
+import {useEffect ,React} from 'react';
 import './seller.css';
 import './add_product.css';
 function Seller()  {
+
+
+
+useEffect(() => { 
+
+
 const becomeSellerElement=document.querySelector('.become-seller');
 const productListingElement=document.querySelector('.product-listing');
 const applyForm=document.querySelector('.apply-form');
 const showApplyFormBtn=document.querySelector('#apply-btn');
-
-
-let showAlert = (msg) => {
-	let alertBox = document.querySelector('.alert-box');
-	let alertMsg = document.querySelector('.alert-msg');
-	alertMsg.innerHTML = msg;
-	alertBox.classList.add('show');
-	setTimeout(() => {
-		alertBox.classList.remove('show');
-	}, 3000);
-}
-
 
 // form submission
 const applyFormButton = document.querySelector('#apply-form-btn'); 
@@ -35,7 +29,7 @@ const legitInfo = document.querySelector('#legitInfo');
 //     showAlert('you must agree to our terms and condition')
 // }
 // })
-
+});
 
 
 
@@ -62,14 +56,7 @@ return (
             <br/>
             <button type="submit" class="submit-btn" id="appply-form-btn">apply</button>
          </div>
-         {/* Product list */}
-         <div class="product-listing">
-            <div class="add-product">
-                <p class="add-product-title">Add Product</p>
-                <button class="btn">Add Product</button>
-            </div>
-            <img src={require("./images/no-products.png")}class="no-product-image" alt=""></img>
-         </div>
+        
 	</div>
    
 );

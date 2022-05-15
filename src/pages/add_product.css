@@ -172,6 +172,7 @@ input::-webkit-inner-spin-button{
 .btn{
     padding: 10px 30px;
     text-transform: capitalize;
+    text-decoration: none;
     color: #fff;
     background: #383838;
     border-radius: 5px;
