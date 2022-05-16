@@ -16,5 +16,5 @@ return (
 	</div>
 );
 };
-
+export default Blogs;
 

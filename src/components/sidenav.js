@@ -1,51 +1,38 @@
 import React from 'react';
+import './sidenav.css';
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
 
 
-const Sidenavbar = () => {
-    const [expanded, setExpanded] = React.useState(true);
-    const [activeKey, setActiveKey] = React.useState('1');
-    return (
-      <div style={{ width: 240 }}>
-        <Toggle
-          onChange={setExpanded}
-          checked={expanded}
-          checkedChildren="Expand"
-          unCheckedChildren="Collapse"
-        />
-        <hr />
-        <Sidenav
-          expanded={expanded}
-          defaultOpenKeys={['3', '4']}
-          activeKey={activeKey}
-          onSelect={setActiveKey}
-        >
-          <Sidenav.Body>
-            <Nav>
-              <Nav.Item eventKey="1" icon={<Dashboard />}>
-                Dashboard
-              </Nav.Item>
-              <Nav.Item eventKey="2" icon={<Group />}>
-                User Group
-              </Nav.Item>
-              <Dropdown placement="rightStart" eventKey="3" title="Advanced" icon={<Magic />}>
-                <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
-                <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
-                <Dropdown.Item eventKey="3-3">Loyalty</Dropdown.Item>
-                <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
-              </Dropdown>
-              <Dropdown placement="rightStart" eventKey="4" title="Settings" icon={<GearCircle />}>
-                <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
-                <Dropdown.Item eventKey="4-2">Channels</Dropdown.Item>
-                <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
-                <Dropdown.Menu eventKey="4-5" title="Custom Action">
-                  <Dropdown.Item eventKey="4-5-1">Action Name</Dropdown.Item>
-                  <Dropdown.Item eventKey="4-5-2">Action Params</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </Nav>
-          </Sidenav.Body>
-        </Sidenav>
-      </div>
-    );
-  };
-  ReactDOM.render(<Sidenavbar />);
+function Sidenav ()  {
+return (
+    <>
+	<div class="bdy_sidenav">
+        <div id="mySidenav" class="sidenav">
+            <a href={void(0)} class="closebtn" onclick={closeNav()}>&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+            </div>
+
+            <div id="main">
+            <h2>Sidenav Push Example</h2>
+            <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+            <span style="font-size:30px;cursor:pointer" onclick={openNav()}>&#9776; open</span>
+        </div>
+       
+
+	</div>
+    </>
+);
+};
+export default Sidenav;

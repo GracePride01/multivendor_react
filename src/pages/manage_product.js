@@ -5,6 +5,7 @@ import './add_product.css';
 
 const ManageProduct = () => {
 return (
+    
 	<div class="bdy">
     <center>
 	<h1 class="add_head" >Manage Product</h1>
