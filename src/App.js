@@ -15,7 +15,7 @@ import SignUp from './pages/signup';
 import Login from './pages/login';
 import Products from './pages/product';
 import Addproduct from './pages/add_product';
-import ViewProduct from './pages/view_product';
+
 import Seller from './pages/seller';
 import ManageProduct from './pages/manage_product';
 
@@ -36,7 +36,6 @@ return (
 			<Route path='/login' component={Login} />
 			<Route path='/products' component ={Products}></Route>
 			<Route path='/add_product'component={Addproduct}></Route>
-			<Route path='/view_product' component={ViewProduct}></Route>
 			<Route path='/seller' component={Seller}></Route>
 			<Route path='/manage_product' component={ManageProduct}/>
 			
