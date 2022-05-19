@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components';
-import { Sidenav, Nav, Dropdown } from 'rsuite';
 
 import { ReactSession } from 'react-client-session';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -25,6 +24,7 @@ function App() {
 return (
 	<Router>
 		<Navbar />
+		
 		<Switch>
 			<Route path='/' exact component={Home} />
 			<Route path='/about' component={About} />
@@ -38,7 +38,7 @@ return (
 			<Route path='/add_product'component={Addproduct}></Route>
 			<Route path='/seller' component={Seller}></Route>
 			<Route path='/manage_product' component={ManageProduct}/>
-			
+		
 		</Switch>
 		<footer>
 			2022 Copy Rights @ CITS

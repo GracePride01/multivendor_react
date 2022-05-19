@@ -2,7 +2,7 @@ import {useEffect ,React,useState} from 'react';
 import './nav.css';
 import './footer.css';
 import {useHistory} from "react-router-dom";
-
+import SideMnu from "./SideMnu";
 
 function Navbar  ()  {
 	
@@ -84,6 +84,9 @@ function Navbar  ()  {
 					<a href="#"><img src={require("../pages/images/cart.png")} alt=""/></a>
 				</div>
 			</div>
+
+			<SideMnu></SideMnu>
+			
 			<ul class="links-container navbar1">
 				<li class="link-item"><a href="/" class="link">home</a></li>
 				<li class="link-item"><a href="/event" class="link">women</a></li>
