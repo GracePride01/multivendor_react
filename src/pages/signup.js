@@ -1,5 +1,7 @@
 import {useEffect ,React} from 'react';
 import { useState } from "react";
+import Navbar from '../components/index';
+import '../components/footer.css';
 import axios from "axios";
 import {faUser, faLock, faEnvelope,} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -109,6 +111,7 @@ function SignUp() {
 	<div style={{
 		marginTop:'50px'
 	}}>
+	<Navbar />
 		<div class="container" >
 		
 		<h1 class="su_li" >Sign Up</h1>
@@ -185,6 +188,9 @@ function SignUp() {
 		<br></br>
 		<br></br>
 		<br></br>
+		<footer>
+			2022 Copy Rights @ CITS
+		</footer>
 	</div>
 	);
 };

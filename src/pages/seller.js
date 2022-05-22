@@ -1,6 +1,8 @@
 import {useEffect ,React} from 'react';
 import './seller.css';
 import './add_product.css';
+import '../components/footer.css';
+import Navbar from '../components/index';
 function Seller()  {
 
 
@@ -34,7 +36,8 @@ const legitInfo = document.querySelector('#legitInfo');
 
 
 return (
-   
+   <>
+   <Navbar />
 	<div class="seller_bdy bdy">
         {/* become seller element */}
         <div class="become-seller hide">
@@ -58,7 +61,10 @@ return (
          </div>
         
 	</div>
-   
+    <footer>
+			2022 Copy Rights @ CITS
+	</footer>
+    </>
 );
 };
 

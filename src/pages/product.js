@@ -1,6 +1,7 @@
 import {useEffect ,React} from 'react';
 import"./product.css";
-
+import Navbar from '../components/index';
+import '../components/footer.css';
 const Products = () => {
 
     useEffect(() => { 
@@ -32,6 +33,7 @@ const Products = () => {
 
 return (
 	<div>
+        <Navbar />
         <section class="product-details">
             <div class="image-slider">
                 <div class="product-images">
@@ -74,6 +76,9 @@ return (
             <h2 class="heading">description</h2>
             <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
         </section>
+    <footer>
+		2022 Copy Rights @ CITS
+	</footer>
 
     
 	</div>

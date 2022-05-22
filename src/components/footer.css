@@ -15,6 +15,14 @@ footer{
     justify-content: space-between;
 }
 
-
+.ad_foot{
+    width: 100%;
+    padding: 10px 10vw;
+    padding-bottom: 10px;
+    background: #5b6e84;
+    text-align: center;
+    color:whitesmoke;
+    font-weight: bold;
+}
 
 

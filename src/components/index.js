@@ -1,8 +1,8 @@
-import {useEffect ,React,useState} from 'react';
+import {React,useState} from 'react';
 import './nav.css';
 import './footer.css';
 import {useHistory} from "react-router-dom";
-import SideMnu from "./SideMnu";
+
 
 function Navbar  ()  {
 	
@@ -74,10 +74,6 @@ function Navbar  ()  {
 
 						</ul>
 					
-
-
-
-							
 						</div>:null
 						}
 					</a>
@@ -85,7 +81,7 @@ function Navbar  ()  {
 				</div>
 			</div>
 
-			<SideMnu></SideMnu>
+			
 			
 			<ul class="links-container navbar1">
 				<li class="link-item"><a href="/" class="link">home</a></li>

@@ -1,7 +1,9 @@
 import React from 'react';
-
+import Navbar from '../components/index';
 const AnnualReport = () => {
 return (
+	<>
+	<Navbar />
 	<div
 	style={{
 		display: 'flex',
@@ -12,6 +14,7 @@ return (
 	>
 	<h1>Blogs</h1>
 	</div>
+	</>
 );
 };
 

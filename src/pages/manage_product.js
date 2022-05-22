@@ -1,11 +1,12 @@
 import React from 'react';
-
+import Navbar from '../components/index';
+import '../components/footer.css';
 import './seller.css';
 import './add_product.css';
 
 const ManageProduct = () => {
-return (
-    
+return (<>
+    <Navbar />
 	<div class="bdy">
     <center>
 	<h1 class="add_head" >Manage Product</h1>
@@ -50,6 +51,9 @@ return (
     </div>
 	
 	</div>
+    <footer>
+			2022 Copy Rights @ CITS
+	</footer></>
 );
 };
 

@@ -1,7 +1,9 @@
 import './login.css';
+import '../components/footer.css';
 import { useState } from "react";
 import {useHistory} from "react-router-dom";
 import axios from "axios";
+import Navbar from '../components/index';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faLock,} from "@fortawesome/free-solid-svg-icons";
 import { ReactSession } from 'react-client-session';
@@ -62,7 +64,7 @@ function Login() {
     <div style={{
       marginTop:'50px'
     }}>
- 
+      <Navbar />
       <div class="container" >
         
       <h1 class="su_li" >Log In</h1>
@@ -111,7 +113,9 @@ function Login() {
       </div>
     <br></br>
     <br></br>
- 
+    <footer>
+			2022 Copy Rights @ CITS
+	  </footer>
     </div>
   
   );

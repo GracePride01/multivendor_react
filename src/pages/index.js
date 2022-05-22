@@ -1,6 +1,6 @@
 import {useEffect,React} from 'react';
-
-
+import Navbar from '../components/index';
+import '../components/footer.css';
 
 
 const Home = () => {
@@ -24,7 +24,7 @@ productContainers.forEach((item, i) => {
 	});
 return (
 	<div >
-
+		<Navbar />
 		<header class="hero-section">
 			<div class="content">
 				<img src={require("./images/light-logo.png")} class="logo" alt=""/>
@@ -120,65 +120,9 @@ return (
         <p class="collection-title">accessories</p>
     </a>
 </section>
-		
-
-		
-
-
-
-
-
-
-	{/* <div class="d1">
-		 <img src={require('./images/1.jpg')} width="550" height="450"alt='1'/>
-	</div>
-	<div class="d2">
-		<img src={require('./images/2.jpg')} width="150" height="100"alt='2'> 
-		
-		</img><br/>
-		<font color="red">Camera $120<br/>Discount 10%</font><br/>
-		<input type="submit" value="Add to Cart" class="btn1"/>
-	</div>
-	 <div class="d3">
-		<img src={require('./images/3.jpg')} width="150" height="100"alt='3'></img>
-		<br/><font color="red">Laptop<br/>$550 Discount 20%</font><br/> 
-		<input type="submit" value="Add to cart" class="btn1"/>
-		
-	</div>
-	<div class="d4"> 
-		<img src={require('./images/4.jpg')} width="150" height="100"alt='4'></img> 
-		 <br/>
-		<font color="red">Speakers<br/>$140 Discount 15%</font><br/> 
-		<input type="submit" value="Add to cart" class="btn1"/>
-	</div>
-	<div class="d5"> 
-		<img src={require('./images/5.jpg')} width="150" height="100"alt='5'></img> 
-		 <br/>
-		<font color="red">Speakers<br/>$140 Discount 15%</font><br/> 
-		<input type="submit" value="Add to cart" class="btn1"/> 
-	
-	</div>
-	<div class="d6"> 
-		<img src={require('./images/6.jpg')} width="150" height="100"alt='6'></img> 
-		 <br/>
-		<font color="red">Speakers<br/>$140 Discount 15%</font><br/> 
-		<input type="submit" value="Add to cart" class="btn1"/> 
-		
-	</div>
-	<div class="d7">
-		<img src={require('./images/7.jpg')} width="150" height="100"alt='7'></img> 
-		 <br/>
-		<font color="red">Speakers<br/>$140 Discount 15%</font><br/> 
-		<input type="submit" value="Add to cart" class="btn1"/> 
-		
-	</div>
-	<div class="d8"> 
-	<img src={require('./images/3.jpg')} height="100" width="100"alt='8'></img><br/> 
-		<center> Available<br/>Gift's<br/>For<br/>All<br/>Shopping...<br/><br/> Place<br/>Your<br/>Orders<br/>Right<br/>Now...</center>
-		
-	</div>  */}
-	
-
+	<footer>
+			2022 Copy Rights @ CITS
+	</footer>
 
 	</div>
 );
