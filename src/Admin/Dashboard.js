@@ -12,10 +12,10 @@ return (
         <SideMnu></SideMnu>
         <div className='container-home'>
         <AdHome />
-                </div>
+        </div>
         <div class="ad_foot">
-			2022 Copy Rights @ CITS
-	    </div>
+		  	  2022 Copy Rights @ CITS
+	      </div>
     </div>
 );
 };

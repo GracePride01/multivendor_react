@@ -36,7 +36,7 @@ return (
                              <li>
                                 <a className='menu-item'>
                                     <div className="menu-icon">
-                                        <i class="bi bi-speedometer2"></i>
+                                        <i class="bi bi-columns-gap"></i>
                                     </div>
                                     <span>Dashboard</span>
                                 </a>
