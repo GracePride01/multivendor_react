@@ -14,8 +14,9 @@ export default function AdHome(){
             <FeaturedInfo />
             <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
             <div className="ad-homeWidgets">
-                <Wlarge />
                 <Wsmall />
+                <Wlarge />
+                
             </div>
         </div>
     )
