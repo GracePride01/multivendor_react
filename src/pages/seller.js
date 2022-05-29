@@ -3,6 +3,7 @@ import './seller.css';
 import './add_product.css';
 import '../components/footer.css';
 import Navbar from '../components/index';
+import SideMnu from '../components/SideMnu';
 function Seller()  {
 
 
@@ -38,6 +39,7 @@ const legitInfo = document.querySelector('#legitInfo');
 return (
    <>
    <Navbar />
+   <SideMnu />
 	<div class="seller_bdy bdy">
         {/* become seller element */}
         <div class="become-seller hide">
@@ -46,10 +48,14 @@ return (
             <button class ="btn-seller" id="apply-btn">Apply for seller account</button>
         </div>
         {/*apply form */}
+
         <div class="apply-form">
+        <h1 class="hd-vw" >Add Users</h1>
+            <input type="text" id="username" placeholder='User Name'></input>
+            <input type="password" id="pass" placeholder='Password'></input>
             <input type="text" id="business-name" placeholder='Business name/Company name/ Shop name'></input>
             <textarea id="business-add" placeholder='address'></textarea>
-            <textarea id="about" placeholder='about'></textarea>
+            <textarea id="type" placeholder='Product Type'></textarea>
             <input type="text" id="number" placeholder='Number'></input>
             <input type="checkbox" class="checkbox" id="terms-and-cond"></input>
             <label type="terms-and-cond"> Agree to our<a href="">Terms and conditions</a></label>

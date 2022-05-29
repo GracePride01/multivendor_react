@@ -204,6 +204,7 @@
 
 .btn-addpro{
     padding: 10px 30px;
+    text-align: justify;
     text-transform: capitalize;
     text-decoration: none;
     color: #fff;
@@ -215,4 +216,7 @@
     cursor: pointer;
     width: 13%;
 }
+.add-user-title
+{
 
+}

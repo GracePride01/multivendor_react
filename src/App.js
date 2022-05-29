@@ -1,5 +1,7 @@
 import {React} from 'react';
 import Navbar from './components';
+import AdminNavbar from './Admin/ad_top_nav';
+import SideMnu from './components/SideMnu';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
@@ -14,6 +16,8 @@ import Addproduct from './pages/add_product';
 import Seller from './pages/seller';
 import ManageProduct from './pages/manage_product';
 import Dashboard from './Admin/Dashboard';
+import UserList from './Admin/Ad_pages/userList/UserList';
+import CustomerList from './Admin/Ad_pages/customerList/CustomerList';
 
 
 function App() {
@@ -35,6 +39,26 @@ return (
 			<Route path='/seller' component={Seller}></Route>
 			<Route path='/manage_product' component={ManageProduct}></Route>
 			<Route path='/Dashboard' component={Dashboard}></Route>
+			<Route path='/userlist' >
+				<AdminNavbar></AdminNavbar>
+				<SideMnu></SideMnu>
+				<div className='container-home'>
+					<UserList />
+				</div>
+				<div class="ad_foot">
+					2022 Copy Rights @ CITS
+				</div>
+			</Route>
+			<Route path='/customerlist' >
+				<AdminNavbar></AdminNavbar>
+				<SideMnu></SideMnu>
+				<div className='container-home'>
+					<CustomerList />
+				</div>
+				<div class="ad_foot">
+					2022 Copy Rights @ CITS
+				</div>
+			</Route>
 		</Switch>
 		
 	</Router>

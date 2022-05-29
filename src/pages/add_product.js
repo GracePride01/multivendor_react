@@ -1,5 +1,6 @@
 import {useEffect ,React} from 'react';
 import Navbar from '../components/index';
+import SideMnu from '../components/SideMnu';
 import  { useState } from 'react';
 import './add_product.css';
 import axios from "axios";
@@ -184,7 +185,9 @@ const onSelectFile = e => {
   }
 };
 return (
-  <><Navbar /><div class="bdy">
+  <><Navbar />
+  <SideMnu />
+  <div class="bdy">
     <h1 class="add_head">Add Product</h1>
 
     <form onSubmit={handleSubmit} encType="multipart">

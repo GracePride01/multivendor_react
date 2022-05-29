@@ -1,0 +1,38 @@
+
+.cusList{
+    flex: 4;
+    margin-left: 300px;
+    position: relative;
+    
+}
+/* .cusListUser{
+    display: flex;
+    align-items: center;
+
+}
+.cusListImg{
+    width: 32px;
+    height:32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+} */
+.cusLidstEdit{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color:#04AA6D;
+    color:white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.cusLidstDelete{
+    color: red;
+    cursor: pointer;
+
+}
+.hd-vw{
+   
+        font-family: "Bell MT";
+        text-align: left;
+}

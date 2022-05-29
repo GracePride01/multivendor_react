@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/index';
+import SideMnu from '../components/SideMnu';
 import '../components/footer.css';
 import './seller.css';
 import './add_product.css';
@@ -7,6 +8,7 @@ import './add_product.css';
 const ManageProduct = () => {
 return (<>
     <Navbar />
+    <SideMnu />
 	<div class="bdy">
     <center>
 	<h1 class="add_head" >Manage Product</h1>
@@ -17,7 +19,7 @@ return (<>
            <p class="add-product-title">Add Product</p>
            <a href="/add_product" class="btn-addpro">Add Product</a>
        </div>
-       <img src={require("./images/no-products.png")}class="no-product-image" alt="" hidden></img>
+       {/* <img src={require("./images/no-products.png")}class="no-product-image" alt="" hidden></img> */}
        
 
        {/*delete alert */}
@@ -34,8 +36,36 @@ return (<>
        <div class="product-container">
            <div class="product-card">
                <div class="product-image">
-                   <span class="tag">Draft</span>
-                   <img src={require('./images/2.jpg')} class="product-thumb" alt=""/>
+                   {/* <span class="tag">Draft</span> */}
+                   <img src={require('./images/card1.png')} class="product-thumb" alt=""/>
+                   <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
+                   <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
+                   <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
+               </div>
+               <div class="product-info">
+                   <h2 class="product-brand">brand</h2>
+                   <p class="product-short-des">a short line about the cloth..</p>
+                   <span class="price">$20</span><span class="actual-price">$40</span>
+               </div>
+           </div>
+           <div class="product-card">
+               <div class="product-image">
+                   {/* <span class="tag">Draft</span> */}
+                   <img src={require('./images/card2.png')} class="product-thumb" alt=""/>
+                   <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
+                   <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
+                   <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
+               </div>
+               <div class="product-info">
+                   <h2 class="product-brand">brand</h2>
+                   <p class="product-short-des">a short line about the cloth..</p>
+                   <span class="price">$20</span><span class="actual-price">$40</span>
+               </div>
+           </div>
+           <div class="product-card">
+               <div class="product-image">
+                   {/* <span class="tag">Draft</span> */}
+                   <img src={require('./images/card4.png')} class="product-thumb" alt=""/>
                    <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
                    <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
                    <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
@@ -47,6 +77,38 @@ return (<>
                </div>
            </div>
        </div>
+
+
+       <div class="product-container">
+           <div class="product-card">
+               <div class="product-image">
+                   <span class="tag">Draft</span>
+                   <img src={require('./images/card6.png')} class="product-thumb" alt=""/>
+                   <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
+                   <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
+                   <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
+               </div>
+               <div class="product-info">
+                   <h2 class="product-brand">brand</h2>
+                   <p class="product-short-des">a short line about the cloth..</p>
+                   <span class="price">$20</span><span class="actual-price">$40</span>
+               </div>
+           </div>
+           <div class="product-card">
+               <div class="product-image">
+                   <span class="tag">Draft</span>
+                   <img src={require('./images/women-collection.png')} class="product-thumb" alt=""/>
+                   <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
+                   <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
+                   <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
+               </div>
+               <div class="product-info">
+                   <h2 class="product-brand">brand</h2>
+                   <p class="product-short-des">a short line about the cloth..</p>
+                   <span class="price">$20</span><span class="actual-price">$40</span>
+               </div>
+           </div>
+           </div>
     
     </div>
 	

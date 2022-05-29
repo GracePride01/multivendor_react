@@ -208,6 +208,7 @@
 }
 
 .discount-tag{
+  font-weight: bold;
     position: absolute;
     background: #fff;
     padding: 5px;
@@ -271,7 +272,7 @@
 .actual-price{
     margin-left: 20px;
     opacity: 0.5;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
 }
 
 .pre-btn, .nxt-btn{
@@ -337,7 +338,7 @@
 }
 
 .product-category{
-    padding: 0 10vw;
+    padding: 20px;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
