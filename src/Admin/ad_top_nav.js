@@ -12,7 +12,7 @@ return (
 			<img src={require("../pages/images/dark-logo.png")} class="brand-logo" alt=""/>
 			<div class="nav-items">
 				<div class="search">
-					<input type="text" class="search-box" placeholder="search brand, product" 	/>
+					<input type="text" class="search-box" placeholder="Search " 	/>
 					<button  class="search-btn">search</button>
 				</div>
 				<a>

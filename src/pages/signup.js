@@ -108,9 +108,7 @@ function SignUp() {
 	});
 
 	return (
-	<div style={{
-		marginTop:'50px'
-	}}>
+	<div >
 	<Navbar />
 		<div class="container" >
 		

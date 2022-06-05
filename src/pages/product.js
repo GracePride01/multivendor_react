@@ -66,8 +66,8 @@ return (
                 
                 <div class="flex">
 
-                <button class="btn cart-btn">add to cart</button>
-                <button class="btn">add to wishlist</button>
+                <a href="/cart" class="btn cart-btn">add to cart</a>
+                <a href="/cart" class="btn">add to wishlist</a>
 
                 </div>
             </div>

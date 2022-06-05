@@ -9,7 +9,7 @@ export default function FeaturedInfo(){
                 <div className='featuredMoneyContainer'>
                     <span className='featuredMoney'>$5,823</span>
                     <span className='featuredMoneyRate'>
-                        $6,231<i class=" featuredIcon negative bi bi-arrow-down"></i>
+                    -11.4<i class=" featuredIcon negative bi bi-arrow-down"></i>
                     </span>
                 </div>
                 <span className='featuredSub'>Compared to last month</span>

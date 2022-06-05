@@ -54,16 +54,18 @@ return (
             <input type="text" id="username" placeholder='User Name'></input>
             <input type="password" id="pass" placeholder='Password'></input>
             <input type="text" id="business-name" placeholder='Business name/Company name/ Shop name'></input>
-            <textarea id="business-add" placeholder='address'></textarea>
-            <textarea id="type" placeholder='Product Type'></textarea>
+            <input type="text" id="email" placeholder='Mail Id'></input>
             <input type="text" id="number" placeholder='Number'></input>
+            <textarea id="business-add" placeholder='Address'></textarea>
+            <textarea id="type" placeholder='Product Type'></textarea>
+           
             <input type="checkbox" class="checkbox" id="terms-and-cond"></input>
             <label type="terms-and-cond"> Agree to our<a href="">Terms and conditions</a></label>
             <br/>
             <input type="checkbox" class="checkbox" id="legitInfo"></input>
             <label for="legitInfo"> all information is legit</label>
             <br/>
-            <button type="submit" class="submit-btn" id="appply-form-btn">apply</button>
+            <button type="submit" class="submit-btn" id="appply-form-btn">Create user</button>
          </div>
         
 	</div>

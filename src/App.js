@@ -18,7 +18,7 @@ import ManageProduct from './pages/manage_product';
 import Dashboard from './Admin/Dashboard';
 import UserList from './Admin/Ad_pages/userList/UserList';
 import CustomerList from './Admin/Ad_pages/customerList/CustomerList';
-
+import Cart from './pages/cart';
 
 function App() {
 return (
@@ -59,6 +59,9 @@ return (
 					2022 Copy Rights @ CITS
 				</div>
 			</Route>
+			<Route path='/cart'component={Cart} ></Route>
+
+
 		</Switch>
 		
 	</Router>

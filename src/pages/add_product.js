@@ -138,40 +138,7 @@ sellingPrice.addEventListener('input',() =>{
 
 addProductBtn.addEventListener('click',()=>{
   storeSizes();
-  //validate form
-  if(!proname.value.length){
-    return showAlert('Enter Product name');
-  }else if(short_line.value.length>100 || short_line.value.length<10){
-    return showAlert('Short description must be between 10 to 100 letters long');
-  }
-  else if(!detail_des.value.length){
-    return showAlert('Enter detail description about the product');
-  }
-  // else if(!imagePaths.length){
-  //   return showAlert('Upload atleast one product image');    
-  // }
-  else if(!img_1.value.length || !img_2.value.length || !img_3.value.length || !img_4.value.length){
-    return showAlert('Upload atleast one product image');
-  }
-  else if(!sizes.length){
-      return showAlert('Select at least one size');
-  }
-  else if(!actual_p.value.length || !discount_p.value.length || !selling_p.value.length){
-    return showAlert('You must add pricings');    
-  }
-  else if(stock.value.length){
-    return showAlert('You should have at least 20 items in stock');
-  }
-  else if(!categ.value.length){
-    return showAlert('Enter few tags to help ranking your product in search');
-  }
-  else if(!tac.checked){
-    return showAlert('You must agree to our terms and conditions');
-  }
-  else{
-    handleSubmit();
-  }
-
+  handleSubmit();
 })
 
 
@@ -200,7 +167,10 @@ return (
 
       {/* <!-- product image --> */}
       <div class="product-info">
-        <div class="product-image"><p class="text">{previewtxt}</p><p class="text">Product <br></br>{selectedFile && <img width="200px" height="100px" src={URL.createObjectURL(selectedFile)} />}</p></div>
+        <div class="product-image" >
+          <p class="text">{previewtxt}</p>
+          <p class="text"> {selectedFile && <img width="200px" height="800px"src={URL.createObjectURL(selectedFile)} />}</p>
+        </div>
         <div class="upload-image-sec">
           {/* <!-- upload inputs --> */}
           <p class="text"><img src={require("./images/camera.png")} alt="" />Upload Image</p>

@@ -43,9 +43,9 @@ return (<>
                    <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
                </div>
                <div class="product-info">
-                   <h2 class="product-brand">brand</h2>
-                   <p class="product-short-des">a short line about the cloth..</p>
-                   <span class="price">$20</span><span class="actual-price">$40</span>
+               <h2 class="product-brand">$1436</h2>
+					<p class="product-short-des">Zivame</p>
+					<span class="price">$20</span><span class="actual-price">$40</span>
                </div>
            </div>
            <div class="product-card">
@@ -57,9 +57,9 @@ return (<>
                    <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
                </div>
                <div class="product-info">
-                   <h2 class="product-brand">brand</h2>
-                   <p class="product-short-des">a short line about the cloth..</p>
-                   <span class="price">$20</span><span class="actual-price">$40</span>
+               <h2 class="product-brand">b$790</h2>
+					<p class="product-short-des">Raymonds</p>
+					<span class="price">$20</span><span class="actual-price">$40</span>
                </div>
            </div>
            <div class="product-card">
@@ -71,9 +71,9 @@ return (<>
                    <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
                </div>
                <div class="product-info">
-                   <h2 class="product-brand">brand</h2>
-                   <p class="product-short-des">a short line about the cloth..</p>
-                   <span class="price">$20</span><span class="actual-price">$40</span>
+               <h2 class="product-brand">$490</h2>
+					<p class="product-short-des">Zivame</p>
+					<span class="price">$20</span><span class="actual-price">$40</span>
                </div>
            </div>
        </div>
@@ -82,30 +82,30 @@ return (<>
        <div class="product-container">
            <div class="product-card">
                <div class="product-image">
-                   <span class="tag">Draft</span>
+                   {/* <span class="tag">Draft</span> */}
                    <img src={require('./images/card6.png')} class="product-thumb" alt=""/>
                    <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
                    <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
                    <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
                </div>
                <div class="product-info">
-                   <h2 class="product-brand">brand</h2>
-                   <p class="product-short-des">a short line about the cloth..</p>
+                   <h2 class="product-brand">$699</h2>
+                   <p class="product-short-des">Raymonds</p>
                    <span class="price">$20</span><span class="actual-price">$40</span>
                </div>
            </div>
            <div class="product-card">
                <div class="product-image">
-                   <span class="tag">Draft</span>
+                   {/* <span class="tag">Draft</span> */}
                    <img src={require('./images/women-collection.png')} class="product-thumb" alt=""/>
                    <button class="card-action-btn edit-btn"><img src={require('./images/edit.png')} alt=""/></button>
                    <button class="card-action-btn open-btn"><img src={require('./images/open.png')} alt=""/></button>
                    <button class="card-action-btn delete-popup-btn"><img src={require('./images/delete.png')} alt=""/></button>
                </div>
                <div class="product-info">
-                   <h2 class="product-brand">brand</h2>
-                   <p class="product-short-des">a short line about the cloth..</p>
-                   <span class="price">$20</span><span class="actual-price">$40</span>
+               <h2 class="product-brand">$1355</h2>
+					<p class="product-short-des">Burberry</p>
+					<span class="price">$20</span><span class="actual-price">$40</span>
                </div>
            </div>
            </div>
