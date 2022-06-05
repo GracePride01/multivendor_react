@@ -37,66 +37,66 @@ const storeSizes = () => {
 }
 
 
-  let handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     storeSizes();
     axios({
       method: 'get',
-      url: "http://localhost/mv_php/add_product.php?proname="+proname+"&short_line="+short_line+"&detail_des="+detail_des+"&img_1="+img_1+"&img_2="+img_2+"&img_3="+img_3+"&img_4="+img_4+"&size="+sizes+"&actual_p="+actual_p+"&discount_p="+discount_p+"&selling_p="+selling_p+"&stock="+stock+"&categ="+categ
-  })
-  .then(function (response) {
+      url: "http://localhost/mv_php/add_product.php?proname=" + proname + "&short_line=" + short_line + "&detail_des=" + detail_des + "&img_1=" + img_1 + "&img_2=" + img_2 + "&img_3=" + img_3 + "&img_4=" + img_4 + "&size=" + sizes + "&actual_p=" + actual_p + "&discount_p=" + discount_p + "&selling_p=" + selling_p + "&stock=" + stock + "&categ=" + categ
+    })
+      .then(function (response) {
         if (response.status === 200) {
-    if(response.data==="s"){
-      
-      setProname("");
-      setShort_line("");
-      setDetail_des("");
-      setImg_1("");
-      setImg_2("");
-      setImg_3("");
-      setImg_4("");
-      setSize("");
-      setActual("");
-      setDiscount("");
-      setSell("");
-      setStock("");
-      setCateg("");
-    setMessage(response.data);
-    showAlert("Product Uploaded Successfully...");
+          if (response.data === "s") {
 
-    }
-    else{
-      
-      setProname("");
-      setShort_line("");
-      setDetail_des("");
-      setImg_1("");
-      setImg_2("");
-      setImg_3("");
-      setImg_4("");
-      setSize("");
-      setActual("");
-      setDiscount("");
-      setSell("");
-      setStock("");
-      setCateg("");
-    setMessage(response.data);
-    showAlert("Error...");
+            setProname("");
+            setShort_line("");
+            setDetail_des("");
+            setImg_1("");
+            setImg_2("");
+            setImg_3("");
+            setImg_4("");
+            setSize("");
+            setActual("");
+            setDiscount("");
+            setSell("");
+            setStock("");
+            setCateg("");
+            setMessage(response.data);
+            showAlert("Product Uploaded Successfully...");
 
-    }
-    
-  } 
-  else {
-    setMessage("Some error occured");
+          }
+          else {
+
+            setProname("");
+            setShort_line("");
+            setDetail_des("");
+            setImg_1("");
+            setImg_2("");
+            setImg_3("");
+            setImg_4("");
+            setSize("");
+            setActual("");
+            setDiscount("");
+            setSell("");
+            setStock("");
+            setCateg("");
+            setMessage(response.data);
+            showAlert("Error...");
+
+          }
+
+        }
+        else {
+          setMessage("Some error occured");
+        }
+        console.log(response);
+
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response);
+      });
   }
-console.log(response)
-
-  })
-  .catch(function (response) {
-      //handle error
-      console.log(response)
-  });
-  };
 
 
 
