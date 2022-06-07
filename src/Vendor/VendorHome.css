@@ -1,0 +1,11 @@
+.ad-home{
+    
+    flex: 4;
+    margin-left: 200px;
+    position: relative;
+}
+.ad-homeWidgets{
+    display:flex;
+    margin:20px;
+    
+}

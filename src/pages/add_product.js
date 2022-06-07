@@ -38,8 +38,24 @@ const storeSizes = () => {
 
 
   async function handleSubmit(e) {
-    e.preventDefault();
+    console.log(proname);    
+    
     storeSizes();
+
+    
+    // alert(short_line);
+    // alert(detail_des);
+    // alert(img_1);
+    // alert(img_2);
+    // alert(img_3);
+    // alert(img_4);
+    // alert(sizes);
+    alert(actual_p);
+    alert(discount_p);
+    alert(selling_p);
+    alert(stock);
+    alert(categ);
+
     axios({
       method: 'get',
       url: "http://localhost/mv_php/add_product.php?proname=" + proname + "&short_line=" + short_line + "&detail_des=" + detail_des + "&img_1=" + img_1 + "&img_2=" + img_2 + "&img_3=" + img_3 + "&img_4=" + img_4 + "&size=" + sizes + "&actual_p=" + actual_p + "&discount_p=" + discount_p + "&selling_p=" + selling_p + "&stock=" + stock + "&categ=" + categ
@@ -67,7 +83,7 @@ const storeSizes = () => {
           }
           else {
 
-            setProname("");
+            setProname("error");
             setShort_line("");
             setDetail_des("");
             setImg_1("");
@@ -82,7 +98,6 @@ const storeSizes = () => {
             setCateg("");
             setMessage(response.data);
             showAlert("Error...");
-
           }
 
         }
@@ -96,6 +111,8 @@ const storeSizes = () => {
         //handle error
         console.log(response);
       });
+
+      e.preventDefault();
   }
 
 
@@ -129,22 +146,14 @@ discountPercentage.addEventListener('input',()=>{
     sellingPrice.value=actualPrice.value-discount;
   }
 })
-
 sellingPrice.addEventListener('input',() =>{
   let discount=(sellingPrice.value/actualPrice.value)*100;
   discountPercentage.value=discount;
 })
-
-
 addProductBtn.addEventListener('click',()=>{
   storeSizes();
   handleSubmit();
 })
-
-
-
-
-
 },[selectedFile]);
 const onSelectFile = e => {
   if (e.target.files && e.target.files.length > 0) {

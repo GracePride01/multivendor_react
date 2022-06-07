@@ -108,7 +108,7 @@ function SignUp() {
 	});
 
 	return (
-	<div >
+	<div>
 	<Navbar />
 		<div class="container" >
 		

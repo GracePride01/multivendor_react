@@ -19,7 +19,7 @@ import Dashboard from './Admin/Dashboard';
 import UserList from './Admin/Ad_pages/userList/UserList';
 import CustomerList from './Admin/Ad_pages/customerList/CustomerList';
 import Cart from './pages/cart';
-
+import VendorDash from './Vendor/Vendor_dash';
 function App() {
 return (
 	<Router>
@@ -60,6 +60,7 @@ return (
 				</div>
 			</Route>
 			<Route path='/cart'component={Cart} ></Route>
+			<Route path='/Vendor_dash' component={VendorDash}></Route>
 
 
 		</Switch>
