@@ -11,6 +11,10 @@ import Wlarge from './widgetLg/widgetLg';
 export default function AdHome(){
     return(
         <div className='ad-home'>
+            <center>
+              <h1 class="hd-vw" >Admin Dashboard</h1>
+                <br></br>
+            </center>
             <FeaturedInfo />
             <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
             <div className="ad-homeWidgets">

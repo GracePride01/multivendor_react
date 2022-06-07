@@ -11,6 +11,10 @@ import './VendorHome.css';
 export default function VendorHome(){
     return(
         <div className='ad-home'>
+            <center>
+            <h1 class="hd-vw" >Vendor Dashboard</h1>
+            <br></br>
+            </center>
             {/* <FeaturedInfo />
             <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
             <div className="ad-homeWidgets">
